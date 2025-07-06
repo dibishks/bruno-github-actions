@@ -1,0 +1,49 @@
+meta {
+  name: CRUD Collection
+  type: http
+  seq: 1
+}
+
+# CREATE
+post {
+  url: {{base-URL}}/items
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "name": "Item 1",
+    "value": 100
+  }
+}
+
+# READ ALL
+get {
+  url: {{base-URL}}/items
+  auth: none
+}
+
+# READ ONE (id=1)
+get {
+  url: {{base-URL}}/items/1
+  auth: none
+}
+
+# UPDATE (id=1)
+put {
+  url: {{base-URL}}/items/1
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "name": "Updated Item 1",
+    "value": 200
+  }
+}
+
+# DELETE (id=1)
+delete {
+  url: {{base-URL}}/items/1
+  auth: none
+} 

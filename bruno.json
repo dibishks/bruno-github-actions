@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "echo-bruno",
+  "name": "crud-api-tests",
   "type": "collection",
   "ignore": [
     "node_modules",

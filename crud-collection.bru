@@ -3,8 +3,6 @@ meta {
   type: http
   seq: 1
 }
-
-# CREATE
 post {
   url: {{base-URL}}/items
   body: json
@@ -16,20 +14,14 @@ body:json {
     "value": 100
   }
 }
-
-# READ ALL
 get {
   url: {{base-URL}}/items
   auth: none
 }
-
-# READ ONE (id=1)
 get {
   url: {{base-URL}}/items/1
   auth: none
 }
-
-# UPDATE (id=1)
 put {
   url: {{base-URL}}/items/1
   body: json
@@ -41,8 +33,6 @@ body:json {
     "value": 200
   }
 }
-
-# DELETE (id=1)
 delete {
   url: {{base-URL}}/items/1
   auth: none

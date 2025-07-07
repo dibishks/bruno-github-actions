@@ -37,10 +37,11 @@ jobs:
         echo "Server did not start in time" && exit 1
     
     - name: Run API Tests
-      run: bru run crud-collection.bru --env ci --reporter-html results.html
+      run: bru run --env crud-dev --reporter-html results.html
+      working-directory: bruno-crud-automation
     
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
       with:
         name: test-results
-        path: results.html
+        path: bruno-crud-automation/results.html
